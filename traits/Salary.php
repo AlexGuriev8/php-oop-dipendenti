@@ -12,5 +12,15 @@ trait Salary
         return 'Non posso fare il calcolo';
        
     }
-    
+
+
+    //--- set --
+    public function setSalary($_salary)
+    {
+        if (!empty($_salary)) {
+            $this->salary = $_salary;
+        } else {
+            die('Non hai inserito lo stipendio');
+        }
+    }
 }

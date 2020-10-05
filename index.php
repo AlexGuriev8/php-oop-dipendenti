@@ -14,9 +14,17 @@ echo $employee->getRole();
 $manager = new Manager('Pippo','Buono','Manager','No Bonus');
 $priceM = $manager->pricePerHour($manager->getRole());
 
-$manager->setHours(133);
+$manager->setHours(200);
 $manager->setBonus('Bonus da stabilire');
 $hours = $manager->getHours();
  
 var_dump($manager);
-echo 'Stipendio: '.$manager->getSalary($priceM, $hours).'$';
+
+echo 'Stipendio: ' . $manager->getSalary($priceM, $hours) . '$';
+$manager->setSalary($manager->getSalary($priceM, $hours));
+var_dump($manager);
+
+
+$consultant = new Consultant('Antonia','Marti','Consultant','No benefits');
+$consultant->setBenefits('Salary increase after 40 working hours');
+var_dump($consultant);
