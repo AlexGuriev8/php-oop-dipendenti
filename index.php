@@ -15,6 +15,7 @@ $manager = new Manager('Pippo','Buono','Manager','No Bonus');
 $priceM = $manager->pricePerHour($manager->getRole());
 
 $manager->setHours(133);
+$manager->setBonus('Bonus da stabilire');
 $hours = $manager->getHours();
  
 var_dump($manager);

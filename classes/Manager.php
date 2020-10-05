@@ -21,7 +21,7 @@ class Manager extends Employee{
 
 
     //--- set --
-    public function setName($_bonus)
+    public function setBonus($_bonus)
     {
         if (!empty($_bonus)) {
             $this->bonus = $_bonus;
