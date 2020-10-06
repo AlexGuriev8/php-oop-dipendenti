@@ -14,7 +14,7 @@ echo $employee->getRole();
 $manager = new Manager('Pippo','Buono','Manager','No Bonus');
 $priceM = $manager->pricePerHour($manager->getRole());
 
-$manager->setHours(200);
+$manager->setHours(100);
 $manager->setBonus('Bonus da stabilire');
 $hours = $manager->getHours();
  
